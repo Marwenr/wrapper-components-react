@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import GridList from "./components/Layout/GridList/GridList";
+import CardOne from "./components/Card/CardOne"
+import CardTwo from "./components/Card/CardTwo"
+import {movies, actors} from './data/data'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GridList items={movies}><CardOne /></GridList>
+      <GridList items={actors}><CardTwo /></GridList>
     </div>
   );
 }
